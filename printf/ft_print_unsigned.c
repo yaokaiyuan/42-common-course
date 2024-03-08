@@ -6,7 +6,7 @@
 /*   By: ykai-yua <ykai-yua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 08:30:59 by ykai-yua          #+#    #+#             */
-/*   Updated: 2024/03/07 10:00:53 by ykai-yua         ###   ########.fr       */
+/*   Updated: 2024/03/08 15:16:41 by ykai-yua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,10 @@ int	ft_print_unsigned(unsigned int n)
 
 	len = 0;
 	if (n == 0)
-		len += write(1, "0", 1);
+	{
+		write(1, "0", 1);
+		len += 1;
+	}
 	else
 	{
 		num = ft_uitoa(n);

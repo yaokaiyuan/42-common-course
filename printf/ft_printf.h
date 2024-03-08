@@ -6,7 +6,7 @@
 /*   By: ykai-yua <ykai-yua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 00:51:52 by ykai-yua          #+#    #+#             */
-/*   Updated: 2024/03/07 15:19:22 by ykai-yua         ###   ########.fr       */
+/*   Updated: 2024/03/08 14:29:39 by ykai-yua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 int		ft_printf(const char *format, ...);
 int		ft_format(va_list ags, const char format);
-int		ft_print_char(int c);
+int		ft_print_char(char c);
 int		ft_print_str(char *str);
 int		ft_ptr_len(uintptr_t num);
 void	ft_put_ptr(uintptr_t num);

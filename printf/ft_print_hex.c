@@ -6,7 +6,7 @@
 /*   By: ykai-yua <ykai-yua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 09:41:49 by ykai-yua          #+#    #+#             */
-/*   Updated: 2024/03/07 14:02:42 by ykai-yua         ###   ########.fr       */
+/*   Updated: 2024/03/08 15:20:55 by ykai-yua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,10 @@ void	ft_put_hex(unsigned int num, const char format)
 int	ft_print_hex(unsigned int num, const char format)
 {
 	if (num == 0)
-		return (write(1, "0", 1));
+	{
+		write(1, "0", 1);
+		return (1);
+	}
 	else
 		ft_put_hex(num, format);
 	return (ft_hex_len(num));

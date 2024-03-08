@@ -6,7 +6,7 @@
 /*   By: ykai-yua <ykai-yua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 07:20:34 by ykai-yua          #+#    #+#             */
-/*   Updated: 2024/03/08 09:02:47 by ykai-yua         ###   ########.fr       */
+/*   Updated: 2024/03/08 15:18:44 by ykai-yua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,14 @@ int	ft_print_ptr(unsigned long long ptr)
 
 	len = 0;
 	if (ptr == 0)
-		len += write(1, "(nil)", 5);
+	{
+		write(1, "(nil)", 5);
+		len += 5;
+	}
 	else
 	{
-		len += write(1, "0x", 2);
+		write(1, "0x", 2);
+		len += 2;
 		ft_put_ptr(ptr);
 		len += ft_ptr_len(ptr);
 	}
